@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Mint",
+        "tags": [
+            "rust",
+            "lib",
+            "math",
+            "data_type"
+        ],
+        "links": [
+            {
+                "base": "GitHub",
+                "url": "https://github.com/kvark/mint"
+            },
+            {
+                "base": "lib.rs",
+                "url": "https://lib.rs/crates/mint"
+            }
+        ],
+        "description": "Math interoperability standard types"
+    }
+]
