@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "name": "Github",
+    "url": "https://github.com",
+    "favicon_url": "https://github.githubassets.com/favicon.ico"
+  },
+  {
+    "name": "HackerNews",
+    "url": "https://news.ycombinator.com",
+    "favicon_url": "https://news.ycombinator.com/favicon.ico"
+  },
+  {
+    "name": "Console",
+    "url": "https://console.dev/latest",
+    "favicon_url": "https://console.dev/favicon.ico"
+  },
+  {
+    "name": "This Week in Rust",
+    "url": "https://this-week-in-rust.org",
+    "favicon_url": "https://www.rust-lang.org/static/images/favicon.svg"
+  },
+  {
+    "name": "Rust GameDev WG",
+    "url": "https://gamedev.rs",
+    "favicon_url": "https://gamedev.rs/favicon-32x32.png"
+  },
+  {
+    "name": "WebAssembly Weekly",
+    "url": "https://wasmweekly.news",
+    "favicon_url": "https://wasmweekly.news/favicon.ico"
+  },
+  {
+    "name": "ElixirWeekly",
+    "url": "https://elixirweekly.net",
+    "favicon_url": "https://elixirweekly.net/favicon.ico"
+  },
+  {
+    "name": "Lib.rs",
+    "url": "https://lib.rs/new",
+    "favicon_url": "https://lib.rs/favicon.png"
+  },
+  {
+    "name": "Dev Community",
+    "url": "https://dev.to",
+    "favicon_url": "https://res.cloudinary.com/practicaldev/image/fetch/s--E8ak4Hr1--/c_limit,f_auto,fl_progressive,q_auto,w_32/https://dev-to.s3.us-east-2.amazonaws.com/favicon.ico"
+  },
+  {
+    "name": "ElixirStatus",
+    "url": "https://elixirstatus.com",
+    "favicon_url": "https://elixirstatus.com/favicon.ico"
+  }
+]

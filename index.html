@@ -2,47 +2,53 @@
 <html>
 
 <head>
-    <base href="./">
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Dashboard</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <script src="https://unpkg.com/alpinejs" defer></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <base href="./">
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Dashboard</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <script src="https://unpkg.com/alpinejs" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="flex flex-col h-screen p-4" x-data>
-    <div>
-        <span class="text-2xl">Dashboard</span>
-    </div>
-    <div class="flex flex-col grow">
-        <div>
-            <span>Sites</span>
+  <div>
+    <span class="text-2xl">Dashboard</span>
+  </div>
+  <div class="flex flex-col grow" x-data="{ sites: [] }" x-init="sites = await (await fetch('sites.json')).json()">
+    <span>Sites</span>
+    <div class="flex">
+      <template x-for="site in sites">
+        <div class="m-1 border rounded px-2 py-1 h-24 w-24">
+          <a class="flex flex-col" x-bind:href="site.url">
+            <img x-bind:src="site.favicon_url" height="32" width="32"></img>
+            <span x-text="site.name"></span>
+          </a>
         </div>
-        <details open>
-            <summary>open source</summary>
-            <div class="mx-8 my-2" x-data="{ projects: [] }"
-                x-init="projects = await (await fetch('projects.json')).json()">
-                <ul class="list-disc list-outside">
-                    <template x-for="project in projects">
-                        <li class="my-1">
-                            <span class="font-black" x-text="project.name"></span>
-                            <div class="flex space-x-2 font-medium">
-                                <template x-for="link in project.links">
-                                    <a class="rounded border px-1 bg-cyan-200" x-bind:href="link.url"
-                                        x-text="link.base"></a>
-                                </template>
-                            </div>
-                            <div class="flex space-x-2 font-bold">
-                                <template x-for="tag in project.tags">
-                                    <span x-text="`#${tag}`"></span>
-                                </template>
-                            </div>
-                            <div x-text="project.description"></div>
-                        </li>
-                    </template>
-                </ul>
-            </div>
-        </details>
+      </template>
     </div>
+    <details open>
+      <summary>open source</summary>
+      <div class="mx-8 my-2" x-data="{ projects: [] }" x-init="projects = await (await fetch('projects.json')).json()">
+        <ul class="list-disc list-outside">
+          <template x-for="project in projects">
+            <li class="my-1 border rounded px-2 py-1">
+              <span class="font-black" x-text="project.name"></span>
+              <div class="flex space-x-2 font-medium">
+                <template x-for="link in project.links">
+                  <a class="rounded border px-1 bg-cyan-200" x-bind:href="link.url" x-text="link.base"></a>
+                </template>
+              </div>
+              <div class="flex space-x-2 font-bold">
+                <template x-for="tag in project.tags">
+                  <span x-text="`#${tag}`"></span>
+                </template>
+              </div>
+              <div x-text="project.description"></div>
+            </li>
+          </template>
+        </ul>
+      </div>
+    </details>
+  </div>
 </body>
