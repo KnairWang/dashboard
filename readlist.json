@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Github Trending Projects",
+    "tags": [
+      "rust"
+    ],
+    "links": [
+      {
+        "base": "GitHub",
+        "url": "https://github.com/trending/rust"
+      }
+    ],
+    "description": "Github Trending, language: rust"
+  }
+]
