@@ -11,5 +11,21 @@
       }
     ],
     "description": "Github Trending, language: rust"
+  },
+  {
+    "name": "在 WSL 上使用 eBPF",
+    "tags": [
+      "ebpf",
+      "bpf",
+      "wsl",
+      "linux_kernel"
+    ],
+    "links": [
+      {
+        "base": "github.io",
+        "url": "https://cheneytianx.github.io/posts/2022/06/"
+      }
+    ],
+    "description": "Github Trending, language: rust"
   }
 ]
